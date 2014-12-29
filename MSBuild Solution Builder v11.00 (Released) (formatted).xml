@@ -1,0 +1,1902 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export date="12/16/2014 14:33:15" user="admin" version="5.0.0.2_534381">
+  <life-cycle-model class="com.urbancode.anthill3.domain.lifecycle.LifeCycleModel" id="5" version="1">
+    <name>Web Team</name>
+    <description>Life cycle for customer-facing apps/systems like the sharebuilder website, the supporting middle tier, etc..</description>
+    <artifact-set-group class="com.urbancode.anthill3.domain.artifacts.ArtifactSetGroup" id="5" version="1">
+      <name>Web Team ArtifactSet Group</name>
+      <description />
+      <artifact-sets>
+        <artifact-set class="com.urbancode.anthill3.domain.artifacts.ArtifactSet" id="20" version="1">
+          <name>Debug</name>
+          <description />
+          <artifact-set-group class="com.urbancode.anthill3.domain.artifacts.ArtifactSetGroup" id="5" />
+        </artifact-set>
+        <artifact-set class="com.urbancode.anthill3.domain.artifacts.ArtifactSet" id="26" version="1">
+          <name>Debug WebDeploy Package</name>
+          <description />
+          <artifact-set-group class="com.urbancode.anthill3.domain.artifacts.ArtifactSetGroup" id="5" />
+        </artifact-set>
+        <artifact-set class="com.urbancode.anthill3.domain.artifacts.ArtifactSet" id="21" version="1">
+          <name>Release</name>
+          <description />
+          <artifact-set-group class="com.urbancode.anthill3.domain.artifacts.ArtifactSetGroup" id="5" />
+        </artifact-set>
+        <artifact-set class="com.urbancode.anthill3.domain.artifacts.ArtifactSet" id="27" version="1">
+          <name>Release WebDeploy Package</name>
+          <description />
+          <artifact-set-group class="com.urbancode.anthill3.domain.artifacts.ArtifactSetGroup" id="5" />
+        </artifact-set>
+        <artifact-set class="com.urbancode.anthill3.domain.artifacts.ArtifactSet" id="25" version="1">
+          <name>Source</name>
+          <description />
+          <artifact-set-group class="com.urbancode.anthill3.domain.artifacts.ArtifactSetGroup" id="5" />
+        </artifact-set>
+      </artifact-sets>
+    </artifact-set-group>
+    <stamp-style-group class="com.urbancode.anthill3.domain.stamp.StampStyleGroup" id="5" version="1">
+      <name>Web Team Stamp Style Group</name>
+      <description />
+      <stamp-styles>
+        <stamp-style class="com.urbancode.anthill3.domain.stamp.StampStyle" id="26" version="1">
+          <name>CI</name>
+          <description />
+          <seq>0</seq>
+          <style-group class="com.urbancode.anthill3.domain.stamp.StampStyleGroup" id="5" />
+        </stamp-style>
+        <stamp-style class="com.urbancode.anthill3.domain.stamp.StampStyle" id="27" version="1">
+          <name>QADrop</name>
+          <description />
+          <seq>1</seq>
+          <style-group class="com.urbancode.anthill3.domain.stamp.StampStyleGroup" id="5" />
+        </stamp-style>
+      </stamp-styles>
+    </stamp-style-group>
+    <status-group class="com.urbancode.anthill3.domain.status.StatusGroup" id="6" version="1">
+      <name>Web Team Status Group</name>
+      <description />
+      <statuses>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="47" version="1">
+          <color>#FF0000</color>
+          <name>failure</name>
+          <description>default failure status. This can be used in scripts that dynamically look up a status but don't find it and need to apply a failure status.</description>
+          <seq>0</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="145" version="1">
+          <color>#FF0000</color>
+          <name>Build Failed</name>
+          <description>Default build failed status</description>
+          <seq>1</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="96" version="1">
+          <color>#FF0000</color>
+          <name>CI Build Failed</name>
+          <description />
+          <seq>2</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="97" version="1">
+          <color>#FF0000</color>
+          <name>QADrop Build Failed</name>
+          <description />
+          <seq>3</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="46" version="1">
+          <color>#7CFC00</color>
+          <name>success</name>
+          <description>default success status. This can be used in scripts that dynamically look up a status but don't find it and need to apply a success status.</description>
+          <seq>4</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="144" version="1">
+          <color>#7CFC00</color>
+          <name>Build Succeeded</name>
+          <description>Default build succeeded status</description>
+          <seq>5</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="106" version="1">
+          <color />
+          <name>First Successful Build</name>
+          <description />
+          <seq>6</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="94" version="1">
+          <color>#7CFC00</color>
+          <name>CI Build Succeeded</name>
+          <description />
+          <seq>7</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="95" version="1">
+          <color>#7CFC00</color>
+          <name>QADrop Build Succeeded</name>
+          <description />
+          <seq>8</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="161" version="1">
+          <color>#FF0000</color>
+          <name>BVT Failed</name>
+          <description>Build Verification Test failed.</description>
+          <seq>9</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="160" version="1">
+          <color>#1E90FF</color>
+          <name>BVT Succeeded</name>
+          <description>Build Verification Test succeeded.</description>
+          <seq>10</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="163" version="1">
+          <color>#F0F8FF</color>
+          <name>Release Dependencies Enforced</name>
+          <description>No prerelease NuGet dependencies.</description>
+          <seq>11</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="119" version="1">
+          <color>#FF0000</color>
+          <name>Deployment Failed</name>
+          <description />
+          <seq>12</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="114" version="1">
+          <color>#7CFC00</color>
+          <name>Deployment Succeeded</name>
+          <description />
+          <seq>13</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="115" version="1">
+          <color>#FF0000</color>
+          <name>Deployment to Dev Environment Failed</name>
+          <description />
+          <seq>14</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="110" version="1">
+          <color>#87CEEB</color>
+          <name>Deployed to Dev Environment</name>
+          <description />
+          <seq>15</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="147" version="1">
+          <color>#9370D8</color>
+          <name>QADrop Delivered</name>
+          <description>QADrop Delivered</description>
+          <seq>16</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="116" version="1">
+          <color>#FF0000</color>
+          <name>Deployment to QA Environment Failed</name>
+          <description />
+          <seq>17</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="111" version="1">
+          <color>#FFC0CB</color>
+          <name>Deployed to QA Environment</name>
+          <description />
+          <seq>18</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="117" version="1">
+          <color>#FF0000</color>
+          <name>Deployment to Perf Environment Failed</name>
+          <description />
+          <seq>19</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="112" version="1">
+          <color>#FFD700</color>
+          <name>Deployed to Perf Environment</name>
+          <description />
+          <seq>20</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="120" version="1">
+          <color>#8B0000</color>
+          <name>Rejected</name>
+          <description>Reject build for Production.</description>
+          <seq>21</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="121" version="1">
+          <color>#FFFF00</color>
+          <name>Approved for Production</name>
+          <description>Designates a build is ready to be deployed to Production. The deployment workflows will check for this status before deploying.</description>
+          <seq>22</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="118" version="1">
+          <color>#FF0000</color>
+          <name>Deployment to Prod Environment Failed</name>
+          <description />
+          <seq>23</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="113" version="1">
+          <color>#8FBC8F</color>
+          <name>Deployed to Prod Environment</name>
+          <description />
+          <seq>24</seq>
+        </status>
+        <status class="com.urbancode.anthill3.domain.status.Status" id="48" version="1">
+          <color>#A9A9A9</color>
+          <name>Archived</name>
+          <description />
+          <seq>25</seq>
+        </status>
+      </statuses>
+    </status-group>
+    <cleanup-config class="com.urbancode.anthill3.domain.cleanup.CleanupConfig" id="32" version="1">
+      <name>Web Team Cleanup</name>
+      <br-expire>7</br-expire>
+      <misc-expire>60</misc-expire>
+      <status-group class="com.urbancode.anthill3.domain.status.StatusGroup" id="6" />
+      <status class="com.urbancode.anthill3.domain.status.Status" id="47">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="145">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="96">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="97">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="46">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="144">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="106">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="94">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="95">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="161">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="160">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="163">
+        <expiration>2147483647</expiration>
+        <min-keep>1</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="119">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="114">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="115">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="110">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="147">
+        <expiration>60</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="116">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="111">
+        <expiration>180</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="117">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="112">
+        <expiration>180</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="120">
+        <expiration>30</expiration>
+        <min-keep>0</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="121">
+        <expiration>2147483647</expiration>
+        <min-keep>2147483647</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="118">
+        <expiration>2147483647</expiration>
+        <min-keep>2147483647</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="113">
+        <expiration>2147483647</expiration>
+        <min-keep>2147483647</min-keep>
+      </status>
+      <status class="com.urbancode.anthill3.domain.status.Status" id="48">
+        <expiration>2147483647</expiration>
+        <min-keep>2147483647</min-keep>
+      </status>
+      <statuses />
+    </cleanup-config>
+  </life-cycle-model>
+  <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="-1" version="1">
+    <name>Default Script Group</name>
+    <description />
+  </script-group>
+  <step-pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="4" version="1">
+    <name>Always</name>
+    <description>Always execute</description>
+    <language>beanshell</language>
+    <script>Fail.never();</script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="-1" />
+  </step-pre-condition-script>
+  <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" version="2">
+    <name>Default</name>
+    <description>Command is Successful only if it returns an exit code of zero</description>
+    <language>beanshell</language>
+    <script>return Fail.unless(ExitCode.is(0))</script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="-1" />
+  </post-process-script>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="681" version="1">
+    <name>Auto-Sonar Scan v2.00 (Released)</name>
+    <description>Run secondary deployment Sonar scan.</description>
+    <life-cycle-model />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.workflow.RunWorkflowStepConfig" id="4301" version="3">
+        <name>Run Sonar Scan Workflow</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="4" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <wait>false</wait>
+        <pass-request-properties>ALL</pass-request-properties>
+        <properties />
+        <environment-name>${p:target.sonar.environment}</environment-name>
+        <workflow-name>${p:sonar.workflow}</workflow-name>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="7" version="1">
+    <name>Build</name>
+    <description>Scripts used for builds.</description>
+  </script-group>
+  <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="27" version="2">
+    <name>Sonar scan QADrop, Release, or Pre-Release build</name>
+    <description>If build.type is QADrop, Pre-Release, or Release and sonar.scan is true, this script triggers a job to run a Sonar scan.</description>
+    <language>beanshell</language>
+    <script>return Logic.and(JobStatus.allAncestorsIn(new JobStatusEnum[] { JobStatusEnum.SUCCESS, JobStatusEnum.SUCCESS_WARN, JobStatusEnum.NOT_NEEDED }), Logic.and(Logic.or(Logic.or(Property.is("build.type", "Pre-Release"),Property.is("build.type", "Release")),Property.is("build.type", "QADrop")),Property.is("sonar.scan", "true")));</script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="7" />
+  </pre-condition>
+  <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="4" version="1">
+    <name>Developer</name>
+    <description>The script group contains scripts for developers.</description>
+  </script-group>
+  <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="13" version="2">
+    <name>SbAhP Default Project-Workflow Directory Using IDs Instead of Names</name>
+    <description />
+    <script>${p:work.dir.drive}\\SbAhP\\_WorkDir\\projects\\${bsh:ProjectLookup.getCurrent().getId()}\\${bsh:WorkflowLookup.getCurrent().getId()}</script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="4" />
+  </work-dir-script>
+  <step-pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" version="1">
+    <name>All Prior Success</name>
+    <description>All prior steps are successful</description>
+    <language>beanshell</language>
+    <script>StepStatus.allPriorIn(new JobStatusEnum[] { JobStatusEnum.SUCCESS, JobStatusEnum.SUCCESS_WARN });</script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="-1" />
+  </step-pre-condition-script>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="482" version="1">
+    <name>Auto-Deploy v1.00 (Released)</name>
+    <description>Run secondary deployment workflow.</description>
+    <life-cycle-model />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.workflow.RunWorkflowStepConfig" id="3182" version="3">
+        <name>Run Deployment Workflow</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <wait>true</wait>
+        <pass-request-properties>ALL</pass-request-properties>
+        <properties />
+        <environment-name>${p:target.deployment.environment}</environment-name>
+        <workflow-name>${p:deployment.workflow}</workflow-name>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="26" version="2">
+    <name>auto-deploy QADrop, Release, or Pre-Release build</name>
+    <description>If build.type is QADrop, Pre-Release, or Release and auto.deploy is true. This script is used to trigger deployment jobs that run deployment secondary workflows.</description>
+    <language>beanshell</language>
+    <script>return Logic.and(JobStatus.allAncestorsIn(new JobStatusEnum[] { JobStatusEnum.SUCCESS, JobStatusEnum.SUCCESS_WARN, JobStatusEnum.NOT_NEEDED }), Logic.and(Logic.or(Logic.or(Property.is("build.type", "Pre-Release"),Property.is("build.type", "Release")),Property.is("build.type", "QADrop")),Property.is("auto.deploy", "true")));</script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="7" />
+  </pre-condition>
+  <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="1" version="2">
+    <name>Fail Never</name>
+    <description>Don't mark a jobstep as failed</description>
+    <language>beanshell</language>
+    <script>return Fail.never()</script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="7" />
+  </post-process-script>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="425" version="1">
+    <name>NCover v1.00 (Released)</name>
+    <description>Run and publish NCover.</description>
+    <life-cycle-model />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.builder.nant.NantBuildStepConfig" id="2871" version="3">
+        <name>NCover</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <step-object class="com.urbancode.anthill3.domain.builder.nant.NantBuilder" version="1">
+          <name>NCover</name>
+          <env-params />
+          <work-dir-offset>${p:test.path}</work-dir-offset>
+          <build-file>testCoverage</build-file>
+          <build-params>
+            <build-param>-D:ncover-settings-file=${p:ncover.settings.file}</build-param>
+            <build-param>-D:ncover-console-exe=NCover.Console.exe</build-param>
+            <build-param>-D:ncover-reporting-exe=NCover.Reporting.exe</build-param>
+            <build-param>-D:nunit-console-2.6.0.exe=${env/NUNIT}\nunit-console.exe</build-param>
+            <build-param>-D:Build.WorkingFolder=.</build-param>
+            <build-param>-D:Build.TestFolder=.</build-param>
+            <build-param>-D:coverage-file=${p:coverage.file}</build-param>
+            <build-param>-D:coverage-trend-file=${p:trend.file}</build-param>
+            <build-param>-D:ProjectName=${p:solution.name}</build-param>
+            <build-param>-D:BuildLabelWithUnderscores=${p:version}</build-param>
+            <build-param>-D:ncover-reporting-settings-file=${p:ncover.reporting.settings.file}</build-param>
+            <build-param>-D:Build.ArtifactFolder=.</build-param>
+            <build-param>-D:config=Release</build-param>
+          </build-params>
+          <mono-home>${env/MONO_HOME}</mono-home>
+          <nant-home>${env/NANT}</nant-home>
+          <nant-params />
+          <target />
+          <script-content><![CDATA[<project name="testCoverage" default="testCoverage">
+<!-- NB: This target depends on a build having been run in one of the build files. Also, the settings files. -->
+<target name="testCoverage">
+    <!-- <loadtasks assembly="Build Task Plugins/NCover.NAntTasks.dll"/> -->
+    <echo message="starting testCoverage"/>
+    <setenv name="JUSTMOCK_INSTANCE" value="1"/>
+    <if test="${file::exists(ncover-settings-file)}">
+        <echo message="(common_functions.build) found Ncover settings file: ${ncover-settings-file}"/>
+        <exec program="${ncover-console-exe}" commandline="//cr ${ncover-settings-file} &quot;${nunit-console-2.6.0.exe}&quot; &quot;/config=${config}&quot; &quot;/result=nunit-results.xml&quot; //w &quot;${Build.TestFolder}&quot; //x &quot;${coverage-file}&quot; //at &quot;${coverage-trend-file}&quot; //onlywithsource //p &quot;${ProjectName}_${BuildLabelWithUnderscores}&quot;" failonerror="true" />
+        <if test="${file::exists(ncover-reporting-settings-file)}">
+            <echo message="(common_functions.build) found Ncover reporting settings file: ${ncover-reporting-settings-file}"/>
+            <exec program="${ncover-reporting-exe}" commandline="//cr ${ncover-reporting-settings-file} &quot;${coverage-file}&quot; //lt &quot;${coverage-trend-file}&quot; //op &quot;${Build.WorkingFolder}&quot; //or &quot;MethodModule:Xml:${Build.ArtifactFolder}/CoverageReport.xml"/>
+        </if>
+    </if>
+</target>
+</project>]]></script-content>
+        </step-object>
+      </step-config>
+      <step-config class="com.urbancode.anthill3.domain.publisher.artifact.report.nunit.NUnitReportPublisherStepConfig" id="2881" version="3">
+        <name>Publish NUnit Test Results</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="4" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="1" />
+        <step-object class="com.urbancode.anthill3.domain.publisher.artifact.report.nunit.NUnitReportPublisher" version="1">
+          <name>Publish NUnit Test Results</name>
+          <description />
+          <report-name />
+          <base-dir>${p:test.path}</base-dir>
+          <digest>false</digest>
+          <excludes />
+          <includes>
+            <include>nunit-results.xml</include>
+          </includes>
+          <report-name />
+          <report-class />
+        </step-object>
+      </step-config>
+      <step-config class="com.urbancode.anthill3.domain.plugin.StepTypeStepConfig" id="2821" version="3">
+        <name>Publish Coverage Report</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="4" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="1" />
+        <work-dir-offset>${p:test.path}</work-dir-offset>
+        <step-type class="com.urbancode.anthill3.domain.plugin.StepType" id="15" version="1">
+          <plugin-id>com.urbancode.anthill3.plugin.NCover</plugin-id>
+          <step-type-name>NCover Coverage Report</step-type-name>
+        </step-type>
+        <env-vars />
+        <properties>
+          <property>
+            <name>convertToTrends</name>
+            <value>true</value>
+          </property>
+          <property>
+            <name>covFile</name>
+            <value>${p:coverage.file}</value>
+          </property>
+          <property>
+            <name>htmlExport</name>
+            <value>true</value>
+          </property>
+          <property>
+            <name>isNcoverComplete</name>
+            <value>true</value>
+          </property>
+          <property>
+            <name>javaOpts</name>
+            <value>-Xmx1024M</value>
+          </property>
+          <property>
+            <name>reportExeLoc</name>
+            <value>NCover.Reporting.exe</value>
+          </property>
+          <property>
+            <name>reportName</name>
+            <value>Coverage Report</value>
+          </property>
+        </properties>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="-7" version="2">
+    <name>All Ancestor Jobs Success or Not Needed</name>
+    <description>Run if the parent job(s) were success or not needed or there are no ancestor jobs.</description>
+    <language>beanshell</language>
+    <script>return JobStatus.allAncestorsIn(new JobStatusEnum[] { JobStatusEnum.SUCCESS, JobStatusEnum.NOT_NEEDED })</script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="-1" />
+  </pre-condition>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="796" version="1">
+    <name>Build Solution - Release v2.00 (Released)</name>
+    <description />
+    <life-cycle-model />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.builder.msbuild.MSBuildStepConfig" id="4714" version="3">
+        <name>Compile Release Build</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <work-dir-offset />
+        <build-file-path>${p:solution.name}.sln</build-file-path>
+        <msbuild-exe-path>${env/MSBUILD_HOME}\msbuild.exe</msbuild-exe-path>
+        <targets />
+        <verbosity>n</verbosity>
+        <build-params />
+        <properties>
+          <property class="com.urbancode.anthill3.domain.builder.NameValuePair" version="1">
+            <name>Configuration</name>
+            <value>Release</value>
+          </property>
+          <property class="com.urbancode.anthill3.domain.builder.NameValuePair" version="1">
+            <name>DeployOnBuild</name>
+            <value>${p:deploy.on.build}</value>
+          </property>
+          <property class="com.urbancode.anthill3.domain.builder.NameValuePair" version="1">
+            <name>PublishProfile</name>
+            <value>FileSystem_Release</value>
+          </property>
+        </properties>
+        <env-params />
+        <script-content />
+      </step-config>
+    </step-configs>
+  </job-config>
+  <agent-filter-script class="com.urbancode.anthill3.domain.script.agentfilter.AgentFilterScript" id="-3" version="2">
+    <name>From Previous Job</name>
+    <description />
+    <language>beanshell</language>
+    <script><![CDATA[import com.urbancode.anthill3.domain.agent.Agent;
+import com.urbancode.anthill3.runtime.scripting.helpers.*;
+
+Where myWhere = new Where() {
+    public Agent[] filter(Agent[] agents) {
+        // assumes that the build job was the first job in orig-workflow
+        Agent targetAgent = BuildLifeLookup.getCurrent().getOriginatingWorkflow().getJobTraceArray()[0].getAgent();
+
+
+        boolean found = false;
+        for (int i = 0; i < agents.length; i++) {
+            if (agents[i].equals(targetAgent)) {
+               found = true;
+               break;
+            }
+
+        }
+        if (found) {
+            return new Agent[]{targetAgent};
+        }
+        else {
+            return new Agent[0];
+        }
+    }
+};
+
+return Where.is(myWhere);]]></script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="-1" />
+  </agent-filter-script>
+  <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="34" version="2">
+    <name>Default Project-Workflow Directory Using IDs Instead of Names</name>
+    <description>${p:work.dir.drive}//SbAhP//_WorkDir//projects//${bsh:ProjectLookup.getCurrent().getId()}//${bsh:WorkflowLookup.getCurrent().getId()}</description>
+    <script>${p:work.dir.drive}//SbAhP//_WorkDir//projects//${bsh:ProjectLookup.getCurrent().getId()}//${bsh:WorkflowLookup.getCurrent().getId()}</script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="-1" />
+  </work-dir-script>
+  <step-pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="33" version="1">
+    <name>app.name==BrokerageWebSite and All Prior Success</name>
+    <description />
+    <language>beanshell</language>
+    <script>return Logic.and(Property.is("app.name", "BrokerageWebSite"), StepStatus.allPriorIn(new JobStatusEnum[] { JobStatusEnum.SUCCESS, JobStatusEnum.SUCCESS_WARN }));</script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="7" />
+  </step-pre-condition-script>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="804" version="1">
+    <name>Create Release version.htm v2.00 (Released)</name>
+    <description><![CDATA[Creates the release version.htm file and puts it in the main project folder. lso creates <root>\a\version.htm if a BrokerageWebSite build.]]></description>
+    <life-cycle-model />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.plugin.StepTypeStepConfig" id="4747" version="3">
+        <name>Create version.htm file</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <work-dir-offset />
+        <step-type class="com.urbancode.anthill3.domain.plugin.StepType" id="39" version="1">
+          <plugin-id>com.urbancode.anthill3.plugin.FileUtilities</plugin-id>
+          <step-type-name>Create File with Contents</step-type-name>
+        </step-type>
+        <env-vars />
+        <properties>
+          <property>
+            <name>absolute</name>
+            <value />
+          </property>
+          <property>
+            <name>path</name>
+            <value>${p:deploypackage.release.path}\version.htm</value>
+          </property>
+          <property>
+            <name>text</name>
+            <value><![CDATA[Build Version: ${p:app.name}_v${p:architecture.version}_${p:sprint.year}_${p:sprint.iteration}_${p:sprint.subiteration}${p:build.version}_Release
+<br>
+BuildLife: ${bsh:BuildLifeLookup.getCurrent().getId()}]]></value>
+          </property>
+        </properties>
+      </step-config>
+      <step-config class="com.urbancode.anthill3.domain.plugin.StepTypeStepConfig" id="4748" version="3">
+        <name>Create MobileWeb version.htm file</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="33" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <work-dir-offset />
+        <step-type class="com.urbancode.anthill3.domain.plugin.StepType" id="39" version="1">
+          <plugin-id>com.urbancode.anthill3.plugin.FileUtilities</plugin-id>
+          <step-type-name>Create File with Contents</step-type-name>
+        </step-type>
+        <env-vars />
+        <properties>
+          <property>
+            <name>absolute</name>
+            <value />
+          </property>
+          <property>
+            <name>path</name>
+            <value>${p:deploypackage.release.path}\a\version.htm</value>
+          </property>
+          <property>
+            <name>text</name>
+            <value><![CDATA[Build Version: ${p:app.name}_v${p:architecture.version}_${p:sprint.year}_${p:sprint.iteration}_${p:sprint.subiteration}${p:build.version}_Release
+<br>
+BuildLife: ${bsh:BuildLifeLookup.getCurrent().getId()}]]></value>
+          </property>
+        </properties>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="24" version="2">
+    <name>build.type==(QADrop or Pre-Release or Release) and AllPriorSuccess or NotNeeded</name>
+    <description />
+    <language>beanshell</language>
+    <script>return Logic.and(JobStatus.allAncestorsIn(new JobStatusEnum[] { JobStatusEnum.SUCCESS, JobStatusEnum.SUCCESS_WARN, JobStatusEnum.NOT_NEEDED }), Logic.or(Logic.or(Property.is("build.type", "Pre-Release"),Property.is("build.type", "Release")),Property.is("build.type", "QADrop")));</script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="7" />
+  </pre-condition>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="884" version="1">
+    <name>Run JS Unit Tests v1.00 (Released)</name>
+    <description />
+    <life-cycle-model class="com.urbancode.anthill3.domain.lifecycle.LifeCycleModel" id="5" />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.plugin.StepTypeStepConfig" id="5246" version="3">
+        <name>Chutzpah</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <work-dir-offset />
+        <step-type class="com.urbancode.anthill3.domain.plugin.StepType" id="50" version="1">
+          <plugin-id>com.urbancode.anthill3.plugin.Shell</plugin-id>
+          <step-type-name>Shell</step-type-name>
+        </step-type>
+        <env-vars />
+        <properties>
+          <property>
+            <name>directoryOffset</name>
+            <value>.</value>
+          </property>
+          <property>
+            <name>outputFile</name>
+            <value />
+          </property>
+          <property>
+            <name>runAsDaemon</name>
+            <value />
+          </property>
+          <property>
+            <name>scriptBody</name>
+            <value>if EXIST ${property:work.dir.path}\ContentSource\jstest\ (
+${property:sbtools.dir}\Chutzpah\chutzpah.console /path ${property:work.dir.path}\ContentSource\jstest\ /coverage /failonerror
+)</value>
+          </property>
+          <property>
+            <name>shellInterpreter</name>
+            <value />
+          </property>
+        </properties>
+      </step-config>
+      <step-config class="com.urbancode.anthill3.domain.publisher.artifact.ArtifactPublisherStepConfig" id="5352" version="3">
+        <name>Publish Chutzpah Coverage Report</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="4" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <step-object class="com.urbancode.anthill3.domain.publisher.artifact.ArtifactPublisher" version="1">
+          <name>Publish Chutzpah Coverage Report</name>
+          <description />
+          <report-name>JSUnit Reports</report-name>
+          <base-dir>.</base-dir>
+          <digest>false</digest>
+          <excludes />
+          <includes>
+            <include>${p:chutzpah.coverage.file}</include>
+          </includes>
+        </step-object>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="543" version="1">
+    <name>Auto Service BVT Runner v1.00 (Released)</name>
+    <description>Automatically run service BVTs at the end of the build.</description>
+    <life-cycle-model />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.workflow.RunWorkflowStepConfig" id="3511" version="3">
+        <name>Run Service BVTs</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <wait>true</wait>
+        <pass-request-properties>NONE</pass-request-properties>
+        <properties />
+        <environment-name>${p:target.deployment.environment}</environment-name>
+        <workflow-name>${p:bvt.workflow}</workflow-name>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="28" version="2">
+    <name>Run BVT on QADrop, Release, or Pre-Release build</name>
+    <description>If run.bvt workflow property is 'true', run.bat workflow property is 'true', and build.type workflow property is either 'QADrop', 'Release', or 'Pre-Release' and all prior jobs are successful, the job will run.</description>
+    <language>beanshell</language>
+    <script>return Logic.and(JobStatus.allAncestorsIn(new JobStatusEnum[] { JobStatusEnum.SUCCESS, JobStatusEnum.SUCCESS_WARN, JobStatusEnum.NOT_NEEDED }), Logic.and(Logic.or(Logic.or(Property.is("build.type", "Pre-Release"),Property.is("build.type", "Release")),Property.is("build.type", "QADrop")), Logic.and(Property.is("run.bvt", "true"), Property.is("auto.deploy", "true"))));</script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="7" />
+  </pre-condition>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="580" version="1">
+    <name>Build Solution - Clean v1.00 (Released)</name>
+    <description>Build Clean target.</description>
+    <life-cycle-model />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.builder.msbuild.MSBuildStepConfig" id="3781" version="3">
+        <name>Clean Target</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <work-dir-offset />
+        <build-file-path>${p:solution.name}.sln</build-file-path>
+        <msbuild-exe-path>${env/MSBUILD_HOME}\msbuild.exe</msbuild-exe-path>
+        <targets>clean</targets>
+        <verbosity>n</verbosity>
+        <build-params />
+        <properties />
+        <env-params />
+        <script-content />
+      </step-config>
+    </step-configs>
+  </job-config>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="581" version="1">
+    <name>Clean Working Directory v2.01 (Released)</name>
+    <description>Delete the working directory.</description>
+    <life-cycle-model />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.builder.shellscript.ShellScriptBuildStepConfig" id="3667" version="3">
+        <name>Remove working directory</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <step-object class="com.urbancode.anthill3.domain.builder.shellscript.ShellScriptBuilder" version="3">
+          <name>Remove working directory</name>
+          <env-params />
+          <work-dir-offset>..</work-dir-offset>
+          <cmd-line>if exist "${p:work.dir.path}" rmdir /q/s "${p:work.dir.path}"</cmd-line>
+          <daemon>false</daemon>
+          <output-file />
+        </step-object>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="29" version="2">
+    <name>clean.work.dir==true</name>
+    <description>Used to control whether the Clean Working Directory job should run. Checks if clean.work.dir workflow property value is 'true'.</description>
+    <language>beanshell</language>
+    <script>return Logic.and(JobStatus.allAncestorsIn(new JobStatusEnum[] { JobStatusEnum.SUCCESS, JobStatusEnum.SUCCESS_WARN, JobStatusEnum.NOT_NEEDED }), Property.is("clean.work.dir", "true"));</script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="7" />
+  </pre-condition>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="373" version="1">
+    <name>Web Team LCM Publish Release v1.00 (Released)</name>
+    <description>ID: jbd_bd_publish_release_v01_00
+DESCRIPTION: Publish release artifact set.</description>
+    <life-cycle-model class="com.urbancode.anthill3.domain.lifecycle.LifeCycleModel" id="5" />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.publisher.artifact.ArtifactDeliverStepConfig" id="2627" version="3">
+        <name>Publish Release</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <step-object class="com.urbancode.anthill3.domain.publisher.artifact.ArtifactDeliver" version="1">
+          <name>Publish Release</name>
+          <description />
+          <artifact-set class="com.urbancode.anthill3.domain.artifacts.ArtifactSet" id="21" />
+          <override>false</override>
+          <include-owner>false</include-owner>
+          <include-group>false</include-group>
+          <include-permissions>false</include-permissions>
+        </step-object>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="588" version="1">
+    <name>Check for PreRelease Dependencies v1.00 (Released)</name>
+    <description>If "prerelease" is found in any of the packages.config files, the check will fail.</description>
+    <life-cycle-model />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.builder.shellscript.ShellScriptBuildStepConfig" id="3669" version="3">
+        <name>Check for PreRelease Dependencies</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <step-object class="com.urbancode.anthill3.domain.builder.shellscript.ShellScriptBuilder" version="3">
+          <name>Check for PreRelease Dependencies</name>
+          <env-params />
+          <work-dir-offset />
+          <cmd-line>@SETLOCAL
+@ECHO OFF
+
+findstr /i /s /c:"prerelease" packages.config
+if %errorlevel% equ 1 (
+   exit /b 0
+) else (
+   echo WARNING: PreRelease dependencies found. Check failed.
+   exit /b 0
+)</cmd-line>
+          <daemon>false</daemon>
+          <output-file />
+        </step-object>
+      </step-config>
+      <step-config class="com.urbancode.anthill3.domain.script.RunScriptStepConfig" id="3812" version="3">
+        <name>Set Release Dependencies Enforced Status</name>
+        <description>Sets the 'Release Dependencies Enforced' buildlife status.</description>
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <language>beanshell</language>
+        <script>import com.urbancode.anthill3.domain.status.Status;
+import com.urbancode.anthill3.domain.buildlife.BuildLifeStatusOriginJobTrace;
+import com.urbancode.anthill3.domain.buildlife.BuildLifeStatus;
+
+final String STATUS = "Release Dependencies Enforced";
+final String PRE_RELEASE_FOUND = "WARNING: PreRelease dependencies found. Check failed.";
+final String STEP_NAME = "Check for PreRelease Dependencies";
+final String COMMAND_NAME = "shell-command";
+
+buildRequest = BuildRequestLookup.getCurrent();
+buildLife = BuildLifeLookup.getCurrent();
+project = buildLife.getProject();
+lifeCycleModel = project.getLifeCycleModel();
+statusGroup = lifeCycleModel.getStatusGroup();
+jobTrace = JobTraceLookup.getCurrent();
+stepTraceArray = jobTrace.getStepTraceArray();
+boolean foundPreRelease = false;
+
+// Check if prerelease NuGet dependencies were found.
+for(stepTrace: stepTraceArray) {
+   if(STEP_NAME.equals(stepTrace.getName())) {
+      for(commandTrace: stepTrace.getCommandTraceArray()) {
+         if(COMMAND_NAME.equals(commandTrace.getName())) {
+            lnr = LogHelper.getOutputReader(commandTrace);
+            while((line = lnr.readLine()) != null &amp;&amp; foundPreRelease == false) {
+               if(line.equals(PRE_RELEASE_FOUND)) {
+                  print("WARNING: Pre-release NuGet dependencies found. The 'Release Dependencies Enforced' buildlife status will not be applied. This build will not be eligible for deployment to Production.");
+                  foundPreRelease = true;
+               }
+            }
+         }
+      }
+   }
+}
+
+// Set status if no Pre-Release NuGet dependencies are found.
+if(!foundPreRelease) {
+   status = statusGroup.getStatus(STATUS);
+   buildRequestDate = buildRequest.getDate();
+   print("No Pre-release NuGet dependencies found. This build is eligible for deployment to Production.\nSetting buildlife status: " + STATUS);
+   BuildLifeStatusOriginJobTrace originJobTrace = new BuildLifeStatusOriginJobTrace(jobTrace);
+   BuildLifeStatus buildLifeStatus = new BuildLifeStatus(status, originJobTrace, buildRequestDate);
+   buildLife.addStatus(buildLifeStatus);
+}</script>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="795" version="1">
+    <name>Build Solution - Debug v2.00 (Released)</name>
+    <description />
+    <life-cycle-model />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.builder.msbuild.MSBuildStepConfig" id="4713" version="3">
+        <name>Compile Debug Build</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <work-dir-offset />
+        <build-file-path>${p:solution.name}.sln</build-file-path>
+        <msbuild-exe-path>${env/MSBUILD_HOME}\msbuild.exe</msbuild-exe-path>
+        <targets />
+        <verbosity>n</verbosity>
+        <build-params />
+        <properties>
+          <property class="com.urbancode.anthill3.domain.builder.NameValuePair" version="1">
+            <name>Configuration</name>
+            <value>Debug</value>
+          </property>
+          <property class="com.urbancode.anthill3.domain.builder.NameValuePair" version="1">
+            <name>DeployOnBuild</name>
+            <value>${p:deploy.on.build}</value>
+          </property>
+          <property class="com.urbancode.anthill3.domain.builder.NameValuePair" version="1">
+            <name>PublishProfile</name>
+            <value>FileSystem_Debug</value>
+          </property>
+        </properties>
+        <env-params />
+        <script-content />
+      </step-config>
+    </step-configs>
+  </job-config>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="803" version="1">
+    <name>Create Debug version.htm v2.00 (Released)</name>
+    <description><![CDATA[Creates the debug version.htm file and puts it in the main project folder. Also creates <root>\a\version.htm if a BrokerageWebSite build]]></description>
+    <life-cycle-model />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.plugin.StepTypeStepConfig" id="4745" version="3">
+        <name>Create version.htm file</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <work-dir-offset />
+        <step-type class="com.urbancode.anthill3.domain.plugin.StepType" id="39" version="1">
+          <plugin-id>com.urbancode.anthill3.plugin.FileUtilities</plugin-id>
+          <step-type-name>Create File with Contents</step-type-name>
+        </step-type>
+        <env-vars />
+        <properties>
+          <property>
+            <name>absolute</name>
+            <value />
+          </property>
+          <property>
+            <name>path</name>
+            <value>${p:deploypackage.debug.path}\version.htm</value>
+          </property>
+          <property>
+            <name>text</name>
+            <value><![CDATA[Build Version: ${p:app.name}_v${p:architecture.version}_${p:sprint.year}_${p:sprint.iteration}_${p:sprint.subiteration}${p:build.version}_Debug
+<br>
+BuildLife: ${bsh:BuildLifeLookup.getCurrent().getId()}]]></value>
+          </property>
+        </properties>
+      </step-config>
+      <step-config class="com.urbancode.anthill3.domain.plugin.StepTypeStepConfig" id="4746" version="3">
+        <name>Create MobileWeb version.htm file</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="33" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <work-dir-offset />
+        <step-type class="com.urbancode.anthill3.domain.plugin.StepType" id="39" version="1">
+          <plugin-id>com.urbancode.anthill3.plugin.FileUtilities</plugin-id>
+          <step-type-name>Create File with Contents</step-type-name>
+        </step-type>
+        <env-vars />
+        <properties>
+          <property>
+            <name>absolute</name>
+            <value />
+          </property>
+          <property>
+            <name>path</name>
+            <value>${p:deploypackage.debug.path}\a\version.htm</value>
+          </property>
+          <property>
+            <name>text</name>
+            <value><![CDATA[Build Version: ${p:app.name}_v${p:architecture.version}_${p:sprint.year}_${p:sprint.iteration}_${p:sprint.subiteration}${p:build.version}_Debug
+<br>
+BuildLife: ${bsh:BuildLifeLookup.getCurrent().getId()}]]></value>
+          </property>
+        </properties>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="374" version="1">
+    <name>Web Team LCM Publish Debug v1.00 (Released)</name>
+    <description>ID: jbd_bd_publish_debug_v01_00
+DESCRIPTION: Publish debug artifact set.</description>
+    <life-cycle-model class="com.urbancode.anthill3.domain.lifecycle.LifeCycleModel" id="5" />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.publisher.artifact.ArtifactDeliverStepConfig" id="2628" version="3">
+        <name>Publish Debug</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <step-object class="com.urbancode.anthill3.domain.publisher.artifact.ArtifactDeliver" version="1">
+          <name>Publish Debug</name>
+          <description />
+          <artifact-set class="com.urbancode.anthill3.domain.artifacts.ArtifactSet" id="20" />
+          <override>false</override>
+          <include-owner>false</include-owner>
+          <include-group>false</include-group>
+          <include-permissions>false</include-permissions>
+        </step-object>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="371" version="1">
+    <name>Web Team LCM Publish Source v1.00 (Released)</name>
+    <description>ID: jbd_bd_publish_source_v01_00
+DESCRIPTION: Publish source artifact set.</description>
+    <life-cycle-model class="com.urbancode.anthill3.domain.lifecycle.LifeCycleModel" id="5" />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.publisher.artifact.ArtifactDeliverStepConfig" id="2626" version="3">
+        <name>Publish Source</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <step-object class="com.urbancode.anthill3.domain.publisher.artifact.ArtifactDeliver" version="1">
+          <name>Publish Source</name>
+          <description />
+          <artifact-set class="com.urbancode.anthill3.domain.artifacts.ArtifactSet" id="25" />
+          <override>false</override>
+          <include-owner>false</include-owner>
+          <include-group>false</include-group>
+          <include-permissions>false</include-permissions>
+        </step-object>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="537" version="1">
+    <name>Install Dependency Nuget Packages v2.00 (Released)</name>
+    <description>Install NuGet packages from dependency.packages. If none are found, do nothing.</description>
+    <life-cycle-model />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.builder.shellscript.ShellScriptBuildStepConfig" id="3443" version="3">
+        <name>Install Dependency Nuget Packages</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <step-object class="com.urbancode.anthill3.domain.builder.shellscript.ShellScriptBuilder" version="3">
+          <name>Install Dependency Nuget Packages</name>
+          <env-params>
+            <env-param class="com.urbancode.anthill3.domain.builder.NameValuePair" version="1">
+              <name>NugetPackageSources</name>
+              <value>${p:nuget_package_sources}</value>
+            </env-param>
+            <env-param class="com.urbancode.anthill3.domain.builder.NameValuePair" version="1">
+              <name>workDirPath</name>
+              <value>${p:work.dir.path}</value>
+            </env-param>
+            <env-param class="com.urbancode.anthill3.domain.builder.NameValuePair" version="1">
+              <name>nuget</name>
+              <value>${env/NUGET}</value>
+            </env-param>
+          </env-params>
+          <work-dir-offset />
+          <cmd-line>@SETLOCAL
+@ECHO OFF
+
+SET FILE_NOT_FOUND=File Not Found
+
+FOR /F "delims=" %%i IN ('DIR /B /S packages.config 2^&gt;^&amp;1') DO (
+  IF  "%%i"=="%FILE_NOT_FOUND%" (
+    ECHO No NuGet packages were found.
+    EXIT /B 0
+  ) ELSE (
+    %nuget%\nuget.exe install "%%i" -source "%NugetPackageSources%" -OutputDirectory "%workDirPath%\${p?:nuget.package.subpath}\packages"
+    IF %ERRORLEVEL% GEQ 1 EXIT /B %ERRORLEVEL%
+  )
+)</cmd-line>
+          <daemon>false</daemon>
+          <output-file />
+        </step-object>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="448" version="1">
+    <name>Assign Build Status v1.00 (Released)</name>
+    <description>Assign a success of failed status of a build depending on the build.type.</description>
+    <life-cycle-model />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.label.AssignLabelStepConfig" id="2921" version="3">
+        <name>Assign Label</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>false</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <name>${bsh:PropertyLookup.get("sprint")}:${bsh:PropertyLookup.get("team")}</name>
+        <cascadeMode>NONE</cascadeMode>
+      </step-config>
+      <step-config class="com.urbancode.anthill3.domain.script.RunScriptStepConfig" id="2897" version="3">
+        <name>Set Build Statuses</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <language>beanshell</language>
+        <script><![CDATA[import com.urbancode.anthill3.domain.status.Status;
+import com.urbancode.anthill3.domain.script.job.JobStatus;
+import com.urbancode.anthill3.services.jobs.JobStatusEnum;
+import com.urbancode.anthill3.domain.buildlife.BuildLifeStatusOriginJobTrace;
+import com.urbancode.anthill3.domain.buildlife.BuildLifeStatus;
+import java.util.HashMap;
+
+final String BUILD_SUCCEEDED_DECODER_PROP_NAME = "build.succeeded.decoder";
+final String BUILD_FAILED_DECODER_PROP_NAME = "build.failed.decoder";
+final String FIRST_SUCCESSFUL_BUILD = "First Successful Build";
+final String DEFAULT_SUCCESS_STATUS = "success";
+final String DEFAULT_FAILURE_STATUS = "failure";
+final String BUILD_TYPE_PROP_NAME = "build.type";
+final String DEFAULT = "DEFAULT";
+final String SPLITTER1 = "\\s*[,;]\\s*";
+final String SPLITTER2 = "\\s*=\\s*";
+
+buildRequest = BuildRequestLookup.getCurrent();
+buildLife = BuildLifeLookup.getCurrent();
+project = buildLife.getProject();
+lifeCycleModel = project.getLifeCycleModel();
+statusGroup = lifeCycleModel.getStatusGroup();
+jobTrace = JobTraceLookup.getCurrent();
+buildType = PropertyLookup.get(BUILD_TYPE_PROP_NAME);
+print("Build Type: " + buildType);
+noFailures = true;
+
+// Find any steps that failed.
+for(jt: WorkflowLookup.getCurrentCase().getJobTraceArray()) {
+   if(JobStatusEnum.FAILED.equals(jt.getStatus())) {
+      noFailures = false;
+      break;
+   }
+   for(st: jt.getStepTraceArray()) {
+      if(JobStatusEnum.FAILED.equals(st.getStatus())) {
+         noFailures = false;
+         break;
+      }
+   }
+}
+if(noFailures) {
+   print("There were no failures in the build.");
+} else {
+   print("There was at least one failure in the build.");
+}
+
+// Create status map based on whether there were failures or not
+Map statusMap = new HashMap();
+buildDecoderPropName = (noFailures) ? BUILD_SUCCEEDED_DECODER_PROP_NAME : BUILD_FAILED_DECODER_PROP_NAME;
+for(token: PropertyLookup.get(buildDecoderPropName).split(SPLITTER1)) {
+   tokenParts = token.split(SPLITTER2);
+   for(int i=0; i < tokenParts.length-1; i++) {
+      statusMap.put(tokenParts[i], tokenParts[tokenParts.length-1]);
+   }
+}
+
+// Set the default 'success' or 'failure' status
+defaultStatus = (noFailures) ? DEFAULT_SUCCESS_STATUS : DEFAULT_FAILURE_STATUS;
+defaultBuildStatus = statusGroup.getStatus(defaultStatus);
+print("Setting required standard status: " + defaultBuildStatus.getName());
+BuildLifeStatusOriginJobTrace defaultOrigin = new BuildLifeStatusOriginJobTrace(jobTrace);
+BuildLifeStatus dbsBuildLifeStatus = new BuildLifeStatus(defaultBuildStatus, defaultOrigin, buildRequest.getDate());
+buildLife.addStatus(dbsBuildLifeStatus);
+
+// Set 'First Successful Build' status if it is the first build.
+if(noFailures && BuildLifeLookup.mostRecentSuccess() == null ) {
+   fsbStatus = statusGroup.getStatus(FIRST_SUCCESSFUL_BUILD);
+   print("This is the first successful build for the workflow. Setting status: " + fsbStatus.getName());
+   BuildLifeStatusOriginJobTrace fsbOrigin = new BuildLifeStatusOriginJobTrace(jobTrace);
+   BuildLifeStatus fsbBuildLifeStatus = new BuildLifeStatus(fsbStatus, fsbOrigin, buildRequest.getDate());
+   buildLife.addStatus(fsbBuildLifeStatus);
+}
+
+// Get status based on build.type
+Status buildTypeStatus = null;
+if(statusMap.containsKey(buildType)) {
+   buildTypeStatus = statusGroup.getStatus(statusMap.get(buildType));
+   if(buildTypeStatus == null) {
+      print("ERROR: Missing LifeCycleModel Status: " + statusMap.get(buildType));
+   }
+} else {
+   print("WARNING: No specific LifeCycleModel Status found for build type: " + buildType + ". Using DEFAULT.");
+   buildTypeStatus = statusGroup.getStatus(statusMap.get(DEFAULT));
+   if(buildTypeStatus == null) {
+   print("ERROR: Missing LifeCycleModel Status: " + statusMap.get(DEFAULT));
+   }
+}
+
+print("Setting status: "  + buildTypeStatus.getName());
+BuildLifeStatusOriginJobTrace bsOrigin = new BuildLifeStatusOriginJobTrace(jobTrace);
+BuildLifeStatus bsBuildLifeStatus = new BuildLifeStatus(buildTypeStatus, bsOrigin, jobTrace.getStartDate());
+buildLife.addStatus(bsBuildLifeStatus);]]></script>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="-3" version="2">
+    <name>Always</name>
+    <description>Always run the job.</description>
+    <language>beanshell</language>
+    <script>Success.always();</script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="-1" />
+  </pre-condition>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="635" version="1">
+    <name>Set Version Number v1.00 (Released)</name>
+    <description>Replace a pattern with the version number in files.</description>
+    <life-cycle-model />
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.plugin.StepTypeStepConfig" id="3953" version="3">
+        <name>Set Version Number</name>
+        <description>Set the version number</description>
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <work-dir-offset>${p?:set.version.workdir.offset}</work-dir-offset>
+        <step-type class="com.urbancode.anthill3.domain.plugin.StepType" id="36" version="1">
+          <plugin-id>com.urbancode.anthill3.plugin.FileUtilities</plugin-id>
+          <step-type-name>Replace Tokens in Multiple Files</step-type-name>
+        </step-type>
+        <env-vars />
+        <properties>
+          <property>
+            <name>baseDir</name>
+            <value>${p?:set.version.base.dir}</value>
+          </property>
+          <property>
+            <name>entryLines</name>
+            <value>${p:set.version.tokens.to.match}</value>
+          </property>
+          <property>
+            <name>excludes</name>
+            <value>${p?:set.version.exclude.pattern}</value>
+          </property>
+          <property>
+            <name>includes</name>
+            <value>${p?:set.version.include.pattern}</value>
+          </property>
+        </properties>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <step-pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="27" version="1">
+    <name>build.type==(QADrop or Release or Pre-Release) and AllPriorSuccess</name>
+    <description>build.type property is either QADrop, Release, or Pre-Release and all prior steps are successful.</description>
+    <language>beanshell</language>
+    <script>return Logic.and(StepStatus.allPriorIn(new JobStatusEnum[] { JobStatusEnum.SUCCESS, JobStatusEnum.SUCCESS_WARN }), Logic.or(Logic.or(Property.is("build.type", "Pre-Release"),Property.is("build.type", "Release")),Property.is("build.type", "QADrop")));</script>
+    <script-group class="com.urbancode.anthill3.domain.script.ScriptGroup" id="7" />
+  </step-pre-condition-script>
+  <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="799" version="1">
+    <name>Pre-Build Setup - Accurev Plugin - Sync Source Paths and Sprint Versioning v3.00 (Released)</name>
+    <description>ID: wfd_pre_build_setup_accurev_plugin_sprint_versioning_v03_00
+
+DESCRIPTION: Pulls code from AccuRev based on the stream and source paths specified and stamps and creates snapshots using the sprint versioning scheme.</description>
+    <life-cycle-model />
+    <source-config-type>com.urbancode.anthill3.domain.source.plugin.PluginSourceConfig</source-config-type>
+    <step-configs>
+      <step-config class="com.urbancode.anthill3.domain.builder.shellscript.ShellScriptBuildStepConfig" id="4753" version="3">
+        <name>Cleanup</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <step-object class="com.urbancode.anthill3.domain.builder.shellscript.ShellScriptBuilder" version="3">
+          <name>Cleanup</name>
+          <env-params />
+          <work-dir-offset>..</work-dir-offset>
+          <cmd-line>if exist "${p:work.dir.path}" rmdir /q/s "${p:work.dir.path}"</cmd-line>
+          <daemon>false</daemon>
+          <output-file />
+        </step-object>
+      </step-config>
+      <step-config class="com.urbancode.anthill3.domain.stamp.StampStepConfig" id="4771" version="3">
+        <name>Stamp based on build type</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <style />
+        <style-script>return PropertyLookup.get("build.type");</style-script>
+      </step-config>
+      <step-config class="com.urbancode.anthill3.domain.script.RunScriptStepConfig" id="4703" version="3">
+        <name>Set AccuRev time spec and snapshot properties</name>
+        <description>Creates an Accurev time spec property based on the build request date. Creates a snap name for labeling the AccuRev source.</description>
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <language>beanshell</language>
+        <script>import java.text.SimpleDateFormat;
+
+buildLife = BuildLifeLookup.getCurrent();
+buildRequest = BuildRequestLookup.getCurrent();
+// Construct AccuRev time spec
+SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss", Locale.US);
+accurevFormattedTimeSpec = dateFormat.format(buildRequest.getDate());
+buildLife.setPropertyValue("accurev.time.spec", accurevFormattedTimeSpec, false);
+
+// Set buildlife properties
+streamName = PropertyLookup.get("stream.name");
+buildLife.setPropertyValue("stream.name", streamName, false);
+appName = PropertyLookup.get("app.name");
+buildLife.setPropertyValue("app.name", appName, false);
+
+// Construct AccuRev snapshot name
+architectureVersion = PropertyLookup.get("architecture.version");
+sprintYear = PropertyLookup.get("sprint.year");
+sprintIteration = PropertyLookup.get("sprint.iteration");
+sprintSubiteration = PropertyLookup.get("sprint.subiteration");
+buildVersion = PropertyLookup.get("build.version");
+accurevSnapshot = appName + "_v" + architectureVersion + "_" + sprintYear + "_" + sprintIteration + "_" + sprintSubiteration + buildVersion + "_bl" + buildLife.getId();
+buildLife.setPropertyValue("accurev.snapshot", accurevSnapshot,false);</script>
+      </step-config>
+      <step-config class="com.urbancode.anthill3.domain.script.RunScriptStepConfig" id="4704" version="3">
+        <name>Set sprint-type version property</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <language>beanshell</language>
+        <script>buildLife = BuildLifeLookup.getCurrent();
+
+// Construct sprint-type version
+architectureVersion = PropertyLookup.get("architecture.version");
+sprintYear = PropertyLookup.get("sprint.year");
+sprintIteration = PropertyLookup.get("sprint.iteration");
+sprintSubiteration = PropertyLookup.get("sprint.subiteration");
+buildVersion = PropertyLookup.get("build.version");
+version = architectureVersion + "." + sprintYear + "." + sprintIteration + "." + sprintSubiteration + buildVersion;
+buildLife.setPropertyValue("version", version,false);</script>
+      </step-config>
+      <step-config class="com.urbancode.anthill3.domain.source.plugin.PluginLabelStepConfig" id="4781" version="3">
+        <name>Label source</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="27" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <label>${p:accurev.snapshot}</label>
+        <message />
+      </step-config>
+      <step-config class="com.urbancode.anthill3.domain.builder.shellscript.ShellScriptBuildStepConfig" id="4752" version="3">
+        <name>Hide snapshot</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="27" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <step-object class="com.urbancode.anthill3.domain.builder.shellscript.ShellScriptBuilder" version="3">
+          <name>Hide snapshot</name>
+          <env-params />
+          <work-dir-offset />
+          <cmd-line>accurev remove stream ${p:accurev.snapshot}</cmd-line>
+          <daemon>false</daemon>
+          <output-file />
+        </step-object>
+      </step-config>
+      <step-config class="com.urbancode.anthill3.domain.source.plugin.PluginPopulateWorkspaceStepConfig" id="4791" version="3">
+        <name>Populate Workspace</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <date-string>WorkspaceDate.get()</date-string>
+        <date-script-language>beanshell</date-script-language>
+        <release-prior-locks>false</release-prior-locks>
+      </step-config>
+      <step-config class="com.urbancode.anthill3.domain.source.plugin.PluginGetChangelogStepConfig" id="4801" version="3">
+        <name>Get Changelog</name>
+        <description />
+        <pre-condition-script class="com.urbancode.anthill3.domain.script.step.StepPreConditionScript" id="1" />
+        <timeout>0</timeout>
+        <ignore-failures>false</ignore-failures>
+        <is-active>true</is-active>
+        <run-in-preflight>true</run-in-preflight>
+        <run-in-preflight-only>false</run-in-preflight-only>
+        <post-process-script class="com.urbancode.anthill3.domain.script.PostProcessScript" id="-3" />
+        <status-script-language>beanshell</status-script-language>
+        <start-status-script>import com.urbancode.anthill3.domain.buildlife.BuildLifeFactory;
+
+static final String BUILD_TYPE_VAR_NAME = "build.type";
+buildType = PropertyLookup.get(BUILD_TYPE_VAR_NAME);
+currentBuildLife = BuildLifeLookup.getCurrent();
+static final String BUILD_TYPE_CI = "CI";
+static final String BUILD_TYPE_STATUS_SUCCEEDED = buildType + " Build Succeeded";
+static final String BUILD_TYPE_STATUS_FAILED = buildType + " Build Failed";
+static final String BUILD_TYPE_STATUS_FIRST_SUCCESSFUL_BUILD = "First Successful Build";
+static final String BUILD_STATUS_SUCCESS = "success";
+static final String BUILD_STATUS_FAILURE = "failure";
+
+// CI builds get changes from the previous successful or failed buildlife
+if(buildType.equalsIgnoreCase(BUILD_TYPE_CI))
+{
+    prevBuildLife = BuildLifeFactory.getInstance().restorePreviousActiveBuildLifeForProfile(currentBuildLife);
+    // This cycles through any previous buildlives that were aborted and have no buildlife status.
+    while(prevBuildLife != null &amp;&amp; prevBuildLife.getLatestStatus() == null)
+    {
+        prevBuildLife = BuildLifeFactory.getInstance().restorePreviousActiveBuildLifeForProfile(prevBuildLife);
+    }
+    // Return buildlife status if there is a previous buildlife with a status else, return the defauls success status
+    if(prevBuildLife != null)
+    {
+        return prevBuildLife.getLatestStatus().getStatus();
+    }
+    else
+    {
+        return BUILD_STATUS_SUCCESS;
+    }
+}
+// All other build types should get changes from the previous successful or failed buildlife of the same type
+else
+{
+    prevBuildLifeArray = BuildLifeFactory.getInstance().restoreAllBefore(currentBuildLife);
+
+    for(prevBuildLife: prevBuildLifeArray)
+    {
+        prevBuildType = prevBuildLife.getOriginatingRequest().getPropertyValue(BUILD_TYPE_VAR_NAME).getValue();
+        print("BuildLife: " + prevBuildLife.getId() + ", Build Type: " + prevBuildType);
+        if(prevBuildType.equalsIgnoreCase(buildType))
+        {
+            for(buildLifeStatus: prevBuildLife.getStatusArray())
+            {
+                statusName = buildLifeStatus.getStatus().getName();
+                if(statusName.equalsIgnoreCase(BUILD_TYPE_STATUS_SUCCEEDED))
+                {
+                    return BUILD_TYPE_STATUS_SUCCEEDED;
+                }
+                else if(statusName.equalsIgnoreCase(BUILD_TYPE_STATUS_FAILED))
+                {
+                    return BUILD_TYPE_STATUS_FAILED;
+                }
+            }
+        }
+    }
+}
+// Catch all for all undefined build life types
+return BUILD_TYPE_STATUS_FIRST_SUCCESSFUL_BUILD;</start-status-script>
+      </step-config>
+    </step-configs>
+  </job-config>
+  <library-workflow class="com.urbancode.anthill3.domain.workflow.WorkflowDefinition" id="744" version="4">
+    <name>MSBuild Solution Builder v11.00 (Released)</name>
+    <description>Build web apps that may or may not have NuGet dependencies.</description>
+    <life-cycle-model class="com.urbancode.anthill3.domain.lifecycle.LifeCycleModel" id="5" />
+    <source-config-type>com.urbancode.anthill3.domain.source.plugin.PluginSourceConfig</source-config-type>
+    <workflow-definition-job-configs>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2540" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="681" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="27" />
+        <no-agent>true</no-agent>
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="13" />
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2541" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="482" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="26" />
+        <no-agent>true</no-agent>
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2542" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="425" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="-7" />
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="13" />
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2543" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="796" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="-7" />
+        <agent-filter class="com.urbancode.anthill3.domain.agentfilter.scripted.AgentFilterImplScripted" version="1">
+          <name>From Previous Job</name>
+          <agent-filter-script class="com.urbancode.anthill3.domain.script.agentfilter.AgentFilterScript" id="-3" />
+        </agent-filter>
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="34" />
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2539" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="804" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="24" />
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="13" />
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2557" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="884" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="-7" />
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="13" />
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2556" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="543" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="28" />
+        <no-agent>true</no-agent>
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2553" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="580" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="24" />
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="13" />
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2552" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="581" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="29" />
+        <agent-filter class="com.urbancode.anthill3.domain.agentfilter.scripted.AgentFilterImplScripted" version="1">
+          <name>From Previous Job</name>
+          <agent-filter-script class="com.urbancode.anthill3.domain.script.agentfilter.AgentFilterScript" id="-3" />
+        </agent-filter>
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="13" />
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2555" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="373" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="24" />
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="13" />
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2554" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="588" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="-7" />
+        <agent-filter class="com.urbancode.anthill3.domain.agentfilter.scripted.AgentFilterImplScripted" version="1">
+          <name>From Previous Job</name>
+          <agent-filter-script class="com.urbancode.anthill3.domain.script.agentfilter.AgentFilterScript" id="-3" />
+        </agent-filter>
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="13" />
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2549" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="795" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="24" />
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="13" />
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2548" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="803" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="24" />
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="13" />
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2551" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="374" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="24" />
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="13" />
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2550" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="371" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="24" />
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="13" />
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2545" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="537" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="-7" />
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="13" />
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2544" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="448" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="-3" />
+        <no-agent>true</no-agent>
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2547" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="635" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="-7" />
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>true</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+      <workflow-definition-job-config class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2546" version="1">
+        <job-config class="com.urbancode.anthill3.domain.jobconfig.generic.GenericJobConfig" id="799" />
+        <pre-condition class="com.urbancode.anthill3.domain.script.job.JobPreConditionScript" id="-3" />
+        <agent-filter class="com.urbancode.anthill3.domain.agentfilter.any.AgentFilterImplAny" version="1">
+          <name>Any</name>
+        </agent-filter>
+        <lock-for-workflow>false</lock-for-workflow>
+        <use-parent-work-dir>false</use-parent-work-dir>
+        <use-source-work-dir>false</use-source-work-dir>
+        <work-dir-script class="com.urbancode.anthill3.domain.workdir.WorkDirScript" id="13" />
+        <inactive>false</inactive>
+      </workflow-definition-job-config>
+    </workflow-definition-job-configs>
+    <arcs>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2543" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2553" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2542" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2543" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2554" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2550" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2550" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2546" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2551" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2548" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2556" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2541" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2545" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2554" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2553" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2551" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2547" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2545" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2540" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2556" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2552" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2555" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2541" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2552" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2539" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2557" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2549" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2547" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2555" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2539" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2544" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2540" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2557" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2542" />
+      </arc>
+      <arc>
+        <to class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2548" />
+        <from class="com.urbancode.anthill3.domain.workflow.WorkflowDefinitionJobConfig" id="2549" />
+      </arc>
+    </arcs>
+  </library-workflow>
+</export>
