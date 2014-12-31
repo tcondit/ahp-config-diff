@@ -15,7 +15,11 @@ from pprint import pprint as pp
 parser = etree.XMLParser()
 #tree = etree.parse('b10f.xml')
 #tree = etree.parse('b11f.xml')
-tree = etree.parse('msb.xml')
+# pretty print the XML before sorting (truly a work in progress)
+# http://stackoverflow.com/questions/749796/pretty-printing-xml-in-python
+tree = etree.parse('msb.xml', parser)
+tree.write('msb_pp.xml', pretty_print=True, encoding='utf-8')
+tree = etree.parse('msb_pp.xml')
 root = tree.getroot()
 
 # Sort child elements by tag (what I think of as name) first
